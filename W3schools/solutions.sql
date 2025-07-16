@@ -26,8 +26,49 @@ INNER JOIN orders o
   select DISTINCT c.CustomerName from customers c 
   join orders o 
   on c.CustomerID = o.CustomerID
+  
+--11. Show all customers whose names start with 'A'.
+  
+  SELect * from customers
+  
+  WHERE CustomerName LIKE 'a%';
+  
+  
 
+--12. Find all customers who are not from Germany.
+  
+  select * from customers c 
+ WHERE c.Country  NOT IN ('Finland', 'Spain');
+  
 
+--13. Get the names of all employees sorted by LastName.
+  
+  select * from employees e 
+  ORDER BY e.LastName DESC ;
+  
+  
+  
+  
+  15. Find the total number of orders.
+
+16. Count how many products each supplier supplies.
+Hint: Use GROUP BY.
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
