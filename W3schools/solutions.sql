@@ -49,17 +49,41 @@ INNER JOIN orders o
   
   
   
-  15. Find the total number of orders.
+ -- 15. Find the total number of orders.
+ 
+  
+  select count (*) as total_orders from orders o
+  
+  
+  
 
-16. Count how many products each supplier supplies.
-Hint: Use GROUP BY.
+
+  
+
+  --16. Count how many products each supplier supplies.
+--Hint: Use GROUP BY.
+  SELECT SupplierID, COUNT(ProductID) AS ProductCount
+FROM Products
+GROUP BY SupplierID;
+  
+
+
+  select s.SupplierName, COUNT(ProductID) AS ProductCount  from suppliers s 
+ 
+  join products p 
+  on s.SupplierID = p.SupplierID
+  GROUP by p.SupplierID;
 
   
   
+  --20. Show the average price of all products.
+
   
+  select AVG(p.Price ) as avg_price
+ from products p
   
-  
-  
+ 
+  	
   
   
   
